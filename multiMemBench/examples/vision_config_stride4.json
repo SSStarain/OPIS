@@ -1,0 +1,7 @@
+{
+  "video_sample_stride": 4,
+  "video_sample_fps": null,
+  "video_skip_initial_seconds": 1.0,
+  "video_max_frames": 64,
+  "video_segmentation_mode": "framewise"
+}

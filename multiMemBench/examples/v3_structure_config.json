@@ -1,0 +1,25 @@
+{
+  "pipeline": "hybrid",
+  "articulated_fallback": "vlm",
+  "articulated": {
+    "human_model": "usyd-community/vitpose-plus-small",
+    "human_revision": "0c30b6534bb621af0162b481176742577264e36e",
+    "animal_model": "https://huggingface.co/JunkyByte/easy_ViTPose/resolve/e83805274e89428969355ec4afffcbc413e79188/onnx/ap10k/vitpose-s-ap10k.onnx",
+    "animal_device": "cpu",
+    "device": "cuda",
+    "min_keypoint_confidence": 0.5,
+    "min_edges": 3,
+    "min_coverage": 0.5,
+    "log_length_tolerance": 0.2,
+    "max_relative_depth_spread": 0.1,
+    "category_profiles": {},
+    "custom_profiles": {}
+  },
+  "endpoint": "",
+  "model": "",
+  "api_key_env": "VLM_API_KEY",
+  "timeout": 60.0,
+  "max_tokens": 2048,
+  "min_confidence": 0.7,
+  "max_claims_per_object": 12
+}

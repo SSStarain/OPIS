@@ -1,0 +1,11 @@
+{
+  "geometry_mode": "input_grounded",
+  "min_geometry_coverage": null,
+  "min_geometry_frames": 3,
+  "presence_weight": 0.2,
+  "identity_weight": 0.4,
+  "geometry_weight": 0.4,
+  "provisional": true,
+  "allow_unlabeled_geometry": false,
+  "allow_opencv_fallback": false
+}

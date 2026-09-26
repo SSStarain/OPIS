@@ -1,0 +1,86 @@
+{
+  "video_id": "generated_tomato_demo",
+  "metadata": {
+    "description": "Simulated post-generation video observation artifact. Detection/segmentation/tracking are assumed to have already run."
+  },
+  "windows": [
+    {
+      "window_id": "frame_000",
+      "frame_index": 0,
+      "frame_size": [640, 480],
+      "objects": [
+        {
+          "observed_id": "v_t3_a",
+          "track_id": "track_t3",
+          "category": "tomato",
+          "bbox": [280, 210, 360, 290],
+          "confidence": 0.98,
+          "attributes": {"color": "yellow_green", "shape": "oval", "mark": "light_spot"},
+          "embedding": [0.10, 0.89, 0.04]
+        },
+        {
+          "observed_id": "v_t2_a",
+          "track_id": "track_t2",
+          "category": "tomato",
+          "bbox": [128, 218, 208, 298],
+          "confidence": 0.96,
+          "attributes": {"color": "green", "shape": "round", "mark": "plain"},
+          "embedding": [0.80, 0.13, 0.04]
+        },
+        {
+          "observed_id": "v_t4_a",
+          "track_id": "track_t4",
+          "category": "tomato",
+          "bbox": [432, 208, 512, 288],
+          "confidence": 0.96,
+          "attributes": {"color": "green", "shape": "round", "mark": "dark_spot"},
+          "embedding": [0.02, 0.80, 0.12]
+        },
+        {
+          "observed_id": "v_dup_a",
+          "track_id": "track_dup",
+          "category": "tomato",
+          "bbox": [500, 210, 580, 290],
+          "confidence": 0.83,
+          "attributes": {"color": "green", "shape": "round", "mark": "dark_spot"},
+          "embedding": [0.02, 0.78, 0.12]
+        }
+      ]
+    },
+    {
+      "window_id": "frame_001",
+      "frame_index": 1,
+      "frame_size": [640, 480],
+      "objects": [
+        {
+          "observed_id": "v_t4_b",
+          "track_id": "track_t4",
+          "category": "tomato",
+          "bbox": [200, 210, 280, 290],
+          "confidence": 0.97,
+          "attributes": {"color": "green", "shape": "round", "mark": "dark_spot"},
+          "embedding": [0.02, 0.82, 0.13]
+        },
+        {
+          "observed_id": "v_t3_b",
+          "track_id": "track_t3",
+          "category": "tomato",
+          "bbox": [48, 210, 128, 290],
+          "confidence": 0.95,
+          "attributes": {"color": "yellow_green", "shape": "oval", "mark": "light_spot"},
+          "embedding": [0.09, 0.91, 0.05]
+        },
+        {
+          "observed_id": "v_t5_b",
+          "track_id": "track_t5",
+          "category": "tomato",
+          "bbox": [144, 318, 244, 398],
+          "confidence": 0.94,
+          "attributes": {"color": "green", "shape": "oval", "mark": "plain"},
+          "embedding": [0.04, 0.13, 0.88]
+        }
+      ]
+    }
+  ]
+}
+

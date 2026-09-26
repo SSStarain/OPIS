@@ -1,0 +1,156 @@
+{
+  "policy": {
+    "duration_preference": [10, 12],
+    "preferred_resolution": 480,
+    "resolution_preference": ["480p", "360p", "720p"],
+    "aspect_ratio": "16:9",
+    "generate_audio": false
+  },
+  "observation_overrides": {
+    "cogvideox/5b-i2v": {
+      "video_sample_stride": 3,
+      "video_sample_fps": null
+    }
+  },
+  "models": {
+    "bytedance/seedance-2.5/image-to-video": {"resolutions": ["480p", "720p", "1080p"], "durations": [4, 5, 6, 7, 8, 9, 10, 11, 12], "aspect_ratio": true},
+    "bytedance/seedance-2.0/image-to-video": {"resolutions": ["480p", "720p", "1080p"], "durations": [10], "aspect_ratio": true, "generate_audio": false},
+    "bytedance/seedance-2.0/mini/image-to-video": {"resolutions": ["720p"], "durations": [10, 12], "aspect_ratio": true},
+    "google/gemini-omni-flash/v1.1/image-to-video": {"resolutions": ["360p", "720p", "1080p", "4k"], "durations": [10, 12], "aspect_ratio": ["16:9", "9:16"]},
+    "xai/grok-imagine-video/v1.5/image-to-video": {"resolutions": ["480p", "720p", "1080p"], "durations": [10, 12], "aspect_ratio": true},
+    "alibaba/wan-3.0/image-to-video": {"resolutions": ["480p", "720p", "1080p"], "durations": [10, 12], "aspect_ratio": true, "image_field": "start_image_url"},
+    "minimax/h3-max/image-to-video": {"resolutions": ["480P", "768P", "1080P"], "durations": [5, 10, 12], "aspect_ratio": false, "prompt_expansion_mode": "balanced"},
+    "minimax/h3-max-turbo/image-to-video": {"resolutions": ["480P", "768P", "1080P"], "durations": [5, 10, 12], "aspect_ratio": false, "prompt_expansion_mode": "balanced"},
+    "fal-ai/kling-video/v3/pro/image-to-video": {"resolutions": ["720p", "1080p"], "durations": [10, 12], "aspect_ratio": true, "image_field": "start_image_url"},
+    "fal-ai/kling-video/v3/turbo/standard/image-to-video": {"resolutions": ["720p"], "durations": [10, 12], "aspect_ratio": true, "image_field": "image_url"}
+  },
+  "local_models": {
+    "sana-wm": {
+      "backend": "local-wm",
+      "adapter": "sana",
+      "resolutions": [
+        "1280x704"
+      ],
+      "resolution_labels": [
+        "720p"
+      ],
+      "durations": [
+        10
+      ],
+      "default_duration": 10,
+      "default_resolution": "1280x704",
+      "fps": 16,
+      "request_frames": 161,
+      "output_frames": 160,
+      "recommended_parallelism": 1
+    },
+    "lingbot-world-2.0": {
+      "backend": "local-wm",
+      "adapter": "lingbot",
+      "resolutions": [
+        "832x480"
+      ],
+      "resolution_labels": [
+        "480p"
+      ],
+      "durations": [
+        10
+      ],
+      "default_duration": 10,
+      "default_resolution": "832x480",
+      "fps": 16,
+      "request_frames": 173,
+      "output_frames": 160,
+      "recommended_parallelism": 1,
+      "required_gpu_count": 2
+    },
+    "matrix-game-3.5": {
+      "backend": "local-wm",
+      "adapter": "matrix35",
+      "resolutions": ["1280x704"],
+      "resolution_labels": ["720p"],
+      "durations": [10],
+      "default_duration": 10,
+      "default_resolution": "1280x704",
+      "fps": 16,
+      "request_frames": 160,
+      "request_poses": 169,
+      "output_frames": 160,
+      "minimum_vram_gb": 40,
+      "recommended_parallelism": 1
+    },
+    "echo-wm-flash": {
+      "backend": "local-wm",
+      "adapter": "echo",
+      "resolutions": ["1280x704"],
+      "resolution_labels": ["720p"],
+      "durations": [10],
+      "default_duration": 10,
+      "default_resolution": "1280x704",
+      "fps": 16,
+      "native_fps": 24,
+      "request_frames": 241,
+      "output_frames": 160,
+      "minimum_vram_gb": 48,
+      "recommended_parallelism": 1
+    },
+    "wan2.2/i2v-a14b": {
+      "backend": "wan22",
+      "task": "i2v-A14B",
+      "variant": "i2v-a14b",
+      "resolutions": ["832x480", "1280x720"],
+      "resolution_labels": ["480p", "720p"],
+      "durations": [5, 10],
+      "default_duration": 10,
+      "default_resolution": "832x480",
+      "fps": 16,
+      "minimum_vram_gb": 80,
+      "recommended_parallelism": 1,
+      "requires": ["--offload_model", "--convert_model_dtype", "--t5_cpu"]
+    },
+    "wan2.2/ti2v-5b": {
+      "backend": "wan22",
+      "task": "ti2v-5B",
+      "variant": "ti2v-5b",
+      "resolutions": ["1280x704"],
+      "resolution_labels": ["720p"],
+      "durations": [5, 10],
+      "default_duration": 10,
+      "default_resolution": "1280x704",
+      "fps": 24,
+      "minimum_vram_gb": 24,
+      "recommended_parallelism": 1,
+      "requires": ["--offload_model", "--convert_model_dtype", "--t5_cpu"]
+    },
+    "cogvideox/5b-i2v": {
+      "backend": "local_i2v",
+      "resolutions": ["832x480"],
+      "resolution_labels": ["480p"],
+      "durations": [10],
+      "default_duration": 10,
+      "default_resolution": "832x480",
+      "aspect_ratio": "16:9-target",
+      "fps": 5,
+      "frame_alignment": 8,
+      "max_frame_num": 49,
+      "native_resolution": "720x480",
+      "native_fps": 8,
+      "spatial_adapter": "letterbox-native-then-center-crop-resize",
+      "temporal_adapter": "49-native-frames-at-5fps",
+      "minimum_vram_gb": 26,
+      "recommended_parallelism": 1
+    },
+    "hunyuanvideo/1.5-i2v": {
+      "backend": "local_i2v",
+      "resolutions": ["832x480", "1280x720"],
+      "resolution_labels": ["480p", "720p"],
+      "durations": [10, 12],
+      "default_duration": 10,
+      "default_resolution": "832x480",
+      "aspect_ratio": "16:9",
+      "fps": 24,
+      "minimum_vram_gb": 14,
+      "recommended_parallelism": 1
+    }
+  }
+}

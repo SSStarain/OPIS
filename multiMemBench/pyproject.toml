@@ -1,0 +1,103 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multiMemBench"
+version = "0.1.0"
+description = "Observation-first multi-object memory benchmark prototype."
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24,<3",
+  "pillow>=10",
+]
+
+[project.optional-dependencies]
+pose = [
+  "numpy>=1.24,<2",
+  "pillow>=10",
+  "torch",
+  "torchvision",
+  "transformers>=4.49,<6",
+  "rtmlib==0.0.16",
+  "onnxruntime>=1.18,<2",
+]
+pose-mmpose = [
+  "mmpose>=1.3,<2",
+  "mmengine>=0.10,<1",
+  "mmcv>=2.0,<2.2",
+]
+fal = ["fal-client>=0.5"]
+orchestration = [
+  "boto3>=1.34",
+  "pillow>=10",
+]
+vision = [
+  "numpy>=1.24",
+  "pillow>=10",
+  "torch",
+  "torchvision",
+]
+sam3 = [
+  "numpy>=1.24",
+  "pillow>=10",
+  "torch",
+  "torchvision",
+  "sam3 @ git+https://github.com/facebookresearch/sam3.git",
+]
+geometry = [
+  "numpy>=1.24,<2",
+  "pillow>=10",
+  "torch",
+  "torchvision",
+  "huggingface_hub",
+  "einops",
+  "safetensors",
+  "opencv-python",
+]
+vggt = [
+  "numpy>=1.24,<2",
+  "pillow>=10",
+  "torch",
+  "torchvision",
+  "huggingface_hub",
+  "einops",
+  "safetensors",
+  "opencv-python",
+  "vggt @ git+https://github.com/facebookresearch/vggt.git",
+]
+vggt-omega = [
+  "numpy>=1.24,<2",
+  "pillow>=10",
+  "torch",
+  "torchvision",
+  "huggingface_hub",
+  "einops",
+  "safetensors",
+  "opencv-python",
+  "vggt-omega @ git+https://github.com/facebookresearch/vggt-omega.git",
+]
+mast3r = [
+  "numpy>=1.24,<2",
+  "pillow>=10",
+  "torch",
+  "torchvision",
+  "opencv-python",
+  "scikit-learn<1.6",
+  "roma",
+  "einops",
+  "huggingface_hub",
+]
+moge2 = [
+  "numpy>=1.24,<2",
+  "pillow>=10",
+  "moge @ git+https://github.com/microsoft/MoGe.git@925b8ed835a7a9cdb7578ba15c658a0afc969030",
+  "utils3d @ git+https://github.com/EasternJournalist/utils3d.git@3fab839f0be9931dac7c8488eb0e1600c236e183",
+]
+
+[project.scripts]
+multimem-eval = "multimem_bench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["multimem_bench*"]

@@ -1,0 +1,13 @@
+{
+  "geometry_mode": "input_grounded",
+  "presence_weight": 0.2,
+  "identity_weight": 0.4,
+  "geometry_weight": 0.4,
+  "monocular_model_id": "../../models/moge-2-vitl/model.pt",
+  "monocular_device": "cuda",
+  "monocular_resolution_level": 5,
+  "matcher": "mast3r",
+  "matcher_model_id": "../../models/mast3r/checkpoints/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth",
+  "matcher_device": "cuda",
+  "allow_opencv_fallback": false
+}

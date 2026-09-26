@@ -1,0 +1,56 @@
+{
+  "scene_id": "tomato_relative_scene_demo",
+  "metadata": {
+    "description": "Simulated reference scene with absolute object geometry.",
+    "category": "green tomato tabletop",
+    "image_size": [520, 300],
+    "prompt_zoom": 2.0
+  },
+  "objects": [
+    {
+      "object_id": "t1",
+      "category": "tomato",
+      "center": [60, 112],
+      "bbox": [40, 92, 80, 132],
+      "attributes": {"color": "green", "shape": "round", "mark": "small_stem"},
+      "embedding": [0.95, 0.05, 0.0],
+      "size_signature": {"aspect_ratio": 1.02}
+    },
+    {
+      "object_id": "t2",
+      "category": "tomato",
+      "center": [184, 124],
+      "bbox": [164, 104, 204, 144],
+      "attributes": {"color": "green", "shape": "round", "mark": "plain"},
+      "embedding": [0.82, 0.12, 0.03],
+      "size_signature": {"aspect_ratio": 1.0}
+    },
+    {
+      "object_id": "t3",
+      "category": "tomato",
+      "center": [260, 120],
+      "bbox": [240, 100, 280, 140],
+      "attributes": {"color": "yellow_green", "shape": "oval", "mark": "light_spot"},
+      "embedding": [0.08, 0.92, 0.05],
+      "size_signature": {"aspect_ratio": 1.15}
+    },
+    {
+      "object_id": "t4",
+      "category": "tomato",
+      "center": [336, 120],
+      "bbox": [316, 100, 356, 140],
+      "attributes": {"color": "green", "shape": "round", "mark": "dark_spot"},
+      "embedding": [0.02, 0.83, 0.12],
+      "size_signature": {"aspect_ratio": 1.0}
+    },
+    {
+      "object_id": "t5",
+      "category": "tomato",
+      "center": [308, 174],
+      "bbox": [283, 154, 333, 194],
+      "attributes": {"color": "green", "shape": "oval", "mark": "plain"},
+      "embedding": [0.04, 0.12, 0.91],
+      "size_signature": {"aspect_ratio": 1.25}
+    }
+  ]
+}
