@@ -251,8 +251,6 @@ OPIS/
 
 Run `multimem-eval <command> --help` for the complete command-line interface.
 
-> [!NOTE]
-> Checkpoints, upstream source checkouts, credentials, and generated results are not included in this repository. The lightweight installation and demo have been checked in a clean environment; the complete GPU/model pipeline has not been verified end to end on this machine.
 
 
 ## Citation
