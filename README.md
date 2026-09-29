@@ -6,7 +6,7 @@
 
 Evaluate whether a generated world preserves the **presence**, **identity**, and **structure** of the objects established by its initial observation.
 
-[![Paper](https://img.shields.io/badge/arXiv-coming%20soon-b31b1b.svg)](#paper)
+[![Paper](https://img.shields.io/badge/arXiv-2609.35052-b31b1b.svg)](https://arxiv.org/abs/2609.35052)
 [![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-Hugging%20Face-FFD21E.svg)](https://huggingface.co/datasets/Kirito-Lab/OPIS-datase)
 [![Code](https://img.shields.io/badge/Code-GitHub-181717.svg?logo=github)](https://github.com/SSStarain/OPIS)
 
@@ -254,15 +254,22 @@ Run `multimem-eval <command> --help` for the complete command-line interface.
 > [!NOTE]
 > Checkpoints, upstream source checkouts, credentials, and generated results are not included in this repository. The lightweight installation and demo have been checked in a clean environment; the complete GPU/model pipeline has not been verified end to end on this machine.
 
-## Paper
-
-**OPIS: An Input-Grounded Benchmark for Multi-Object Memory in Video World Models**
-
-The arXiv link will be added when the paper is released.
 
 ## Citation
 
-If OPIS is useful in your research, please cite the paper. The BibTeX entry will be added with the arXiv release.
+If OPIS is useful in your research, please cite the paper:
+
+```bibtex
+@misc{wang2026opisinputgroundedbenchmarkmultiobject,
+      title={OPIS: An Input-Grounded Benchmark for Multi-Object Memory in Video World Models}, 
+      author={Hao Wang and Tao Yu and Liuzhou Zhang and HeXin Wang and Haopeng Jin and Yuxuan Zhou and Xinming Wang and Hongzhu Yi and Xinye Li and Yuanlei Wang and Ping Nie and Yan Huang and Yuxuan Zhang and Pengfei Zhou and Yanyan Zou and Wei Yang},
+      year={2026},
+      eprint={2609.35052},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2609.35052}, 
+}
+```
 
 ## Acknowledgements
 
